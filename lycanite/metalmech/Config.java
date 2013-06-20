@@ -15,15 +15,15 @@ public class Config {
 	public static boolean electricMachinesEnabled;
 	public static boolean alternateRecipesEnabled;
 	
-	public static void init() {
+	public static void init(File configFile) {
 		/*
 		 * Metal Mechanics creates 2 configuration files. This one for the machines and recipes and a Metallurgy one for the ores, etc.
 		 */
 		
 		// Create Config File:
-		File configFile = new File(MetalMech.proxy.getMinecraftDir() + "/config");
-		configFile.mkdir();
-		File newConfigFile = new File(MetalMech.proxy.getMinecraftDir() + "/config/MetalMechanics.cfg");
+		//File configFile = new File(MetalMech.proxy.getMinecraftDir() + "/config");
+		//configFile.mkdir();
+		File newConfigFile = new File(configFile, "MetalMechanics.cfg");
 	    try {
 	    	newConfigFile.createNewFile();
 	    	System.out.println("[MetalMech] Successfully created/read configuration file");

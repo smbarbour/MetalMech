@@ -80,7 +80,7 @@ public class MetalMech {
 		MachineManager.addMachines();
 		
 		// ========== Config ==========
-		Config.init();
+		Config.init(event.getModConfigurationDirectory());
 		
 		// ========== Create Metalset ==========
 		filepath = event.getSourceFile().getAbsolutePath();
